@@ -1,0 +1,32 @@
+alumnos = [{
+     nombre: "Julian",
+     calificaciones:[6,7,8]
+     },{
+     nombre:"Adrian",
+     calificaciones:[8,8,8]
+     },{
+     nombre:"Victor",
+     calificaciones:[6,3,2]
+     },{
+     nombre:"Clarita",
+     calificaciones:[2,4,8]
+     }
+]
+
+
+for(var i=0; i <alumnos.length; i++){
+     var promedio = 0;
+     var calificacionPorAlumno, sumaCalificacion = 0;
+     for(var c=0; c < alumnos[i].calificaciones.length;c++){
+          calificacionPorAlumno = alumnos[i].calificaciones[c];
+          sumaCalificacion += calificacionPorAlumno;
+          //console.log("Calificacion " + c + " de Alumno " + i + " " + calificacionPorAlumno);
+          //console.log("Suma al momento = " + sumaCalificacion);
+     }
+     promedio = sumaCalificacion/alumnos[i].calificaciones.length;
+     //console.log("Promedio de alumno " + i + " = " + promedio);
+     if(promedio<=5){
+          promedio = promedio.toFixed(2)
+          console.log("Alumno " + alumnos[i].nombre + " NO aprobado.  Promedio de alumno  = " + promedio);
+     }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+	<body>
+    <h1>Ejercicio Promedio :D</h1>
+    <script type="text/javascript">
+        let listaCalificaciones = [6,7,8];
+        let sumaCalificacion = 0;
+        let promedio = 0;
+				for(var i=0;i<listaCalificaciones.length;i++){
+            sumaCalificacion += listaCalificaciones[i];
+
+        }
+        console.log("La suma es:" + sumaCalificacion);
+        promedio = sumaCalificacion / listaCalificaciones.length;
+				console.log("Tu promedio es: " + promedio);
+				if(promedio >= 8){
+					console.log('Tu promedio es : " + promedio + ". Podrás contar con una beca');
+				}else {
+					console.log('Tu promedio no es suficiente para una beca... Sigue esforzandote =)');
+				}
+    </script>
+	</body>
+</html>
